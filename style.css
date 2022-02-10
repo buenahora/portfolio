@@ -1,0 +1,144 @@
+/* Globales */
+
+:root {
+  --negro: #000000;
+  --azul: #14213d;
+  --naranja: #fca311;
+  --casiblanco: #e5e5e5;
+  --blanco: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-padding-top: 10vh;
+}
+
+body {
+  background-color: var(--azul);
+  color: var(--casiblanco);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Inicio Header */
+
+header {
+  padding: 40px;
+  height: 10vh;
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--blanco);
+  opacity: 0.95;
+  color: var(--negro);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul a:link,
+nav ul a:visited,
+nav ul a {
+  margin-right: 40px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.25s ease-out;
+}
+
+nav ul a:hover {
+  color: var(--naranja);
+}
+
+nav ul a:last-child {
+  position: relative;
+  float: right;
+  margin-right: 0;
+  flex: 1;
+  text-align: right;
+}
+
+/* Fin Header */
+
+/* Inicio inicio */
+
+#inicio {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: repeat(10, 1fr);
+  padding: 5%;
+  height: 100vh;
+  align-items: center;
+  padding-left: 15%;
+}
+
+.presentation {
+  font-size: 2rem;
+  grid-row: 3 / span 1;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  grid-row: 4 / span 1;
+  font-family: "Dancing Script", cursive;
+}
+
+.role {
+  font-size: 1.5rem;
+  grid-row: 5 / span 1;
+}
+
+.inicio-contacto {
+  grid-row: 7 / span 1;
+  text-decoration: none;
+  background-color: var(--naranja);
+  color: var(--casiblanco);
+  padding: 15px;
+  width: fit-content;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.75s ease-out;
+
+}
+
+.social-media {
+    grid-row: 9 / span 1;
+}
+
+.social-media a:visited, 
+.social-media a:link,
+.social-media a {
+    color: var(--casiblanco);
+    text-decoration: none;
+} 
+
+
+.social-media i {
+    padding-right: 30px;
+}
+
+.inicio-contacto:hover {
+    background-color: var(--casiblanco);
+    color: var(--naranja)
+}
+
+.inicio-imagen {
+  grid-column: 2;
+  grid-row: 1 / span 9;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+
+
+/* Fin inicio */
