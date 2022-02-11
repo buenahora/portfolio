@@ -24,16 +24,16 @@
     <header>
       <nav>
         <ul>
-          <a href="">
+          <a href="#inicio">
             <li>Inicio</li>
           </a>
-          <a href="">
+          <a href="#about">
             <li>Sobre Mi</li>
           </a>
-          <a href="">
+          <a href="#proyectos">
             <li>Proyectos</li>
           </a>
-          <a href="">
+          <a href="#contacto">
             <li>Contacto</li>
           </a>
         </ul>
@@ -42,11 +42,11 @@
 
     <main>
       <section id="inicio">
-        <p class="presentation">Hola soy</p>
-        <p class="name">Franco Buenahora</p>
+        <p class="presentation">Hola, soy</p>
+        <h1 class="name">Franco Buenahora</h1>
         <p class="role">Jr. Fullstack Developer</p>
 
-        <a href="" class="inicio-contacto">Contactame</a>
+        <a href="#contacto" class="inicio-contacto">Contactame</a>
 
         <img src="./img/portrait.jpg" class="inicio-imagen" />
 
@@ -63,11 +63,32 @@
         </div>
       </section>
 
-      <section id="about"></section>
+      <section id="about">
+        <h2 class="section-title">Sobre Mi</h2>
+        <p>Hola! Soy Franco</p>
+        <p>Soy un <span>Jr. Fullstack Developer</span> establecido en Uruguay 🇺🇾</p>
+        <p>Mi objetivo es ayudar tanto a personas como a negocios con sus problemas relacionados al desarrollo web, ya sea crear su primera pagina desde cero o rediseñar una ya existente para adaptarse a los estandares actuales.</p>
+        <p>Si estan interesados <a href="#contacto">escribanme</a></p>
 
-      <section id="proyects"></section>
+        <img src="./img/businessman.jpg" alt="A picture of me in a suit" />
+      </section>
 
-      <section id="contact"></section>
+      <section id="proyectos">
+        <h2 class="section-title">Proyectos</h2>
+      </section>
+
+      <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+
+        
+        <form>
+          <input required type="text" placeholder="Nombre" name="nombre">
+          <input required type="text" placeholder="Mail" name="mail">
+          <textarea required placeholder="Mensaje" name="mensaje" rows="5"></textarea>
+          <input type="submit" value="Enviar" class="submit">
+        </form>
+
+      </section>
     </main>
 
     <footer></footer>
