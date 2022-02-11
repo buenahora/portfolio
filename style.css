@@ -33,16 +33,24 @@ header {
   top: 0;
   width: 100%;
   background-color: var(--blanco);
-  opacity: 0.95;
+  opacity: 0.9;
   color: var(--negro);
+}
+
+.barras {
+  position: relative;
+  float: right;
+  margin-right: 0;
+  flex: 1;
+  text-align: right;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
-  font-weight: bold;
   justify-content: flex-start;
   align-items: center;
+  list-style: none;
+  font-weight: bold;
 }
 
 nav ul a:link,
@@ -187,14 +195,62 @@ nav ul a:last-child {
   font-weight: 500;
 }
 
+#tecnologias {
+  grid-row: 7 / span 1;
+}
+
+#tecnologias h3 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+#tecnologias-icons i {
+  padding-right: 30px;
+}
+
+#tecnologias-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 /* Fin sobre mi */
 
 /* Inicio proyectos */
 
 #proyectos {
-  padding-left: 15%;
   padding-top: 5%;
   height: 100vh;
+  padding-left: 0;
+}
+
+#proyectos .section-title {
+  padding-left: 15%;
+}
+
+#contenedor-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5%;
+  gap: 40px;
+}
+
+#contenedor-proyectos p {
+  font-size: 1.5rem;
+  margin: 15px;
+  color: var(--naranja);
+}
+
+#contenedor-proyectos a:visited,
+#contenedor-proyectos a:link,
+#contenedor-proyectos a {
+  text-decoration: none;
+}
+
+#contenedor-proyectos img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 /* Fin proyectos */
@@ -230,7 +286,6 @@ nav ul a:last-child {
   padding: 10px;
   outline: none;
   transition: all 0.25s ease-out;
-
 }
 
 #contacto input::placeholder {
@@ -249,7 +304,6 @@ nav ul a:last-child {
   padding: 10px;
   outline: none;
   transition: all 0.25s ease-out;
-
 }
 
 #contacto input:focus,
@@ -273,3 +327,178 @@ nav ul a:last-child {
 }
 
 /* Fin contacto */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1400px) {
+  header {
+    height: auto;
+  }
+
+  #contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5%;
+    gap: 40px;
+  }
+
+  #proyectos {
+    height: auto;
+  }
+
+  #tecnologias h3 {
+    font-size: 1.5rem;
+    margin: 50px 0;
+  }
+
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    background-color: var(--blanco);
+    padding: 75px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #proyectos {
+    margin-top: 20%;
+  }
+
+  #contacto {
+    margin-top: 10%;
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #contacto input, #contacto textarea {
+    width: 80%;
+  }
+
+  #contacto, #about, #inicio, #proyectos .section-title {
+    padding-left: 5%;
+  }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #about {
+    grid-template-rows: repeat(16, 5%);
+    padding-top: 10%;
+    height: auto;
+  }
+
+  #about h2 {
+    grid-row: 1 / span 1;
+  }
+
+  
+  #about img {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 2;
+
+  }
+
+  #about p {
+    margin-top: 25px;
+    grid-column: 1 / span 2;
+  }
+
+  #about .about-introduction {
+    grid-row: 10 / span 1;
+  }
+  
+  #about .about-role {
+    grid-row: 11 / span 2;
+    
+  }
+  
+  
+  
+  #about .about-objective {
+    grid-row: 12 / span 2;
+  }
+  
+  #about .about-action {
+    grid-row: 16 / span 1;
+    
+  }
+
+  #tecnologias {
+    margin-top: 25px;
+    grid-row: 17 / span 1;
+    grid-column: 1 / span 2;
+
+  }
+  
+  #tecnologias h3 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {   
+  #contenedor-proyectos {
+    grid-template-columns: 1fr;
+
+  }
+
+  #contacto input, #contacto textarea {
+    width: 100%;
+  }
+
+  #about .about-introduction {
+    grid-row: 10 / span 1;
+  }
+  
+  #about .about-role {
+    grid-row: 11 / span 2;
+    
+  }
+  
+  
+  
+  #about .about-objective {
+    grid-row: 13 / span 2;
+  }
+  
+  #about .about-action {
+    grid-row: 17 / span 1;
+    
+  }
+
+  #tecnologias {
+    margin-top: 25px;
+    grid-row: 18 / span 1;
+    grid-column: 1 / span 2;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {   
+  nav {
+    transition: all 0.50s ease-out;
+  }
+
+  nav ul {
+    display: none;
+
+  }
+  nav ul a {
+    display: block;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  nav ul a:last-child {
+    float: none;
+    position: inherit;
+    text-align: inherit;
+  }
+}

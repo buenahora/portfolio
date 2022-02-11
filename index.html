@@ -7,7 +7,7 @@
     <title>Franco Buenahora Porfolio</title>
     <link href="./normalize-2.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,6 +36,7 @@
           <a href="#contacto">
             <li>Contacto</li>
           </a>
+
         </ul>
       </nav>
     </header>
@@ -65,29 +66,103 @@
 
       <section id="about">
         <h2 class="section-title">Sobre Mi</h2>
-        <p>Hola! Soy Franco</p>
-        <p>Soy un <span>Jr. Fullstack Developer</span> establecido en Uruguay 🇺🇾</p>
-        <p>Mi objetivo es ayudar tanto a personas como a negocios con sus problemas relacionados al desarrollo web, ya sea crear su primera pagina desde cero o rediseñar una ya existente para adaptarse a los estandares actuales.</p>
-        <p>Si estan interesados <a href="#contacto">escribanme</a></p>
+        <p class="about-introduction">Hola! Soy Franco</p>
+        <p class="about-role">
+          Soy un <span>Jr. Fullstack Developer</span> establecido en Uruguay 🇺🇾
+        </p>
+        <p class="about-objective">
+          Mi objetivo es ayudar tanto a personas como a negocios con sus
+          problemas relacionados al desarrollo web, ya sea crear su primera
+          pagina desde cero o rediseñar una ya existente para adaptarse a los
+          estandares actuales.
+        </p>
+        <p class="about-action">Si estan interesados <a href="#contacto">escribanme</a></p>
+
+        <div id="tecnologias">
+          <h3>Las tecnologias que uso actualmente son:</h3>
+
+          <div id="tecnologias-icons">
+            <i class="fa-brands fa-react fa-5x"></i>
+            <i class="fa-brands fa-js fa-5x"></i>
+            <i class="fa-brands fa-node fa-5x"></i>
+            <i class="fa-brands fa-css3-alt fa-5x"></i>
+            <i class="fa-brands fa-html5 fa-5x"></i>
+          </div>
+        </div>
 
         <img src="./img/businessman.jpg" alt="A picture of me in a suit" />
       </section>
 
       <section id="proyectos">
         <h2 class="section-title">Proyectos</h2>
+        
+        <div id="contenedor-proyectos">
+          
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+                            
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+
+                            
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+
+                            
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+
+                            
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+
+                            
+                  <a href="">
+                    <div class="proyecto">
+                      <p>Nombre de pagina</p>
+                      <img src="./img/page.png" alt="Imagen de pagina hecha por mi">
+                    </div>
+                  </a>
+
+
+        </div>
+
       </section>
 
       <section id="contacto">
         <h2 class="section-title">Contacto</h2>
 
-        
         <form>
-          <input required type="text" placeholder="Nombre" name="nombre">
-          <input required type="text" placeholder="Mail" name="mail">
-          <textarea required placeholder="Mensaje" name="mensaje" rows="5"></textarea>
-          <input type="submit" value="Enviar" class="submit">
+          <input required type="text" placeholder="Nombre" name="nombre" />
+          <input required type="text" placeholder="Mail" name="mail" />
+          <textarea
+            required
+            placeholder="Mensaje"
+            name="mensaje"
+            rows="5"
+          ></textarea>
+          <input type="submit" value="Enviar" class="submit" />
         </form>
-
       </section>
     </main>
 
