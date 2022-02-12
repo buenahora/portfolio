@@ -211,7 +211,6 @@ nav ul a:last-child {
 #tecnologias-icons {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 /* Fin sobre mi */
@@ -371,20 +370,26 @@ nav ul a:last-child {
   }
 }
 
-
 @media only screen and (max-width: 1000px) {
-  #contacto input, #contacto textarea {
+  #contacto input,
+  #contacto textarea {
     width: 80%;
   }
 
-  #contacto, #about, #inicio, #proyectos .section-title {
+  #contacto,
+  #about,
+  #inicio,
+  #proyectos .section-title {
     padding-left: 5%;
   }
-
-
 }
 
 @media only screen and (max-width: 800px) {
+  #tecnologias-icons {
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-evenly;
+  }
 
   #about {
     grid-template-rows: repeat(16, 5%);
@@ -396,11 +401,9 @@ nav ul a:last-child {
     grid-row: 1 / span 1;
   }
 
-  
   #about img {
     grid-column: 1 / span 2;
     grid-row: 5 / span 2;
-
   }
 
   #about p {
@@ -411,88 +414,76 @@ nav ul a:last-child {
   #about .about-introduction {
     grid-row: 10 / span 1;
   }
-  
+
   #about .about-role {
     grid-row: 11 / span 2;
-    
   }
-  
-  
-  
+
   #about .about-objective {
     grid-row: 12 / span 2;
   }
-  
+
   #about .about-action {
     grid-row: 16 / span 1;
-    
   }
 
   #tecnologias {
     margin-top: 25px;
     grid-row: 17 / span 1;
     grid-column: 1 / span 2;
-
   }
-  
+
   #tecnologias h3 {
     font-size: 2rem;
     margin-bottom: 50px;
   }
-
 }
 
-
-@media only screen and (max-width: 600px) {   
+@media only screen and (max-width: 600px) {
   #contenedor-proyectos {
     grid-template-columns: 1fr;
-
   }
 
-  #contacto input, #contacto textarea {
+  #contacto input,
+  #contacto textarea {
     width: 100%;
+  }
+
+  #about p {
+    font-size: 1.25rem;
+    padding-right: 20px;
   }
 
   #about .about-introduction {
     grid-row: 10 / span 1;
   }
-  
+
   #about .about-role {
     grid-row: 11 / span 2;
-    
   }
-  
-  
-  
+
   #about .about-objective {
     grid-row: 13 / span 2;
   }
-  
+
   #about .about-action {
     grid-row: 17 / span 1;
-    
   }
 
   #tecnologias {
     margin-top: 25px;
     grid-row: 18 / span 1;
     grid-column: 1 / span 2;
-
   }
-}
-
-@media only screen and (max-width: 600px) {   
   nav {
-    transition: all 0.50s ease-out;
+    transition: all 0.5s ease-out;
   }
 
   nav ul {
     display: none;
-
   }
   nav ul a {
-    display: block;
-    width: 50%;
+    width: 100%;
     margin-top: 20px;
   }
 
@@ -500,5 +491,49 @@ nav ul a:last-child {
     float: none;
     position: inherit;
     text-align: inherit;
+  }
+
+  .inicio-imagen {
+    display: none;
+  }
+
+  .presentation {
+    font-size: 2rem;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    grid-row: 4 / span 1;
+    font-family: "Dancing Script", cursive;
+    margin: 0;
+    grid-column: 1 / span 2;
+  }
+
+  .role {
+    font-size: 1.5rem;
+    grid-row: 5 / span 1;
+  }
+
+  .inicio-contacto {
+    grid-row: 7 / span 1;
+    text-decoration: none;
+    background-color: var(--naranja);
+    color: var(--casiblanco);
+    padding: 15px;
+    width: fit-content;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.75s ease-out;
+  }
+
+  #contacto form {
+    margin-top: 5%;
+    width: 90%;
+    background-color: var(--blanco);
+    padding: 15px 30px;
+    border-radius: 10px;
   }
 }
