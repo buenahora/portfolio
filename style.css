@@ -593,6 +593,11 @@ nav ul a:last-child {
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
 
+  #tecnologias {
+    justify-items: center;
+    width: 100%;
+  }
+
   header {
     height: auto;
   }
@@ -756,6 +761,11 @@ nav ul a:last-child {
 
 
 @media only screen and (min-width: 460px) and (max-width: 500px) {
+
+  #tecnologias {
+    justify-items: center;
+    width: 100%;
+  }
 
   header {
     height: auto;
@@ -1029,6 +1039,11 @@ nav ul a:last-child {
     justify-content: space-evenly;
   }
 
+  #tecnologias {
+    justify-items: center;
+    width: 100%;
+  }
+
   #contenedor-proyectos {
     grid-template-columns: 1fr;
   }
@@ -1114,6 +1129,8 @@ nav ul a:last-child {
 
   #tecnologias {
     padding-left: 0;
+    justify-items: center;
+    width: 100%;
   }
 
   #about h3 {
